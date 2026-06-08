@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sahariyar Rahman Shop Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #101417;
+            color: #e0e2e8;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(28, 32, 36, 0.4);
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        @media (min-width: 768px) {
+            .glass-card:hover {
+                background: rgba(50, 53, 57, 0.6);
+                border: 1px solid rgba(233, 196, 0, 0.3);
+                transform: translateY(-8px);
+            }
+        }
+        .gold-glow {
+            box-shadow: 0 0 40px -10px rgba(233, 196, 0, 0.2);
+        }
+        .inner-glow {
+            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+        }
+        .bg-mesh {
+            background-image: radial-gradient(at 0% 0%, rgba(233, 196, 0, 0.05) 0px, transparent 50%),
+                              radial-gradient(at 100% 100%, rgba(112, 93, 0, 0.1) 0px, transparent 50%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#c6c6cf",
+                        "secondary-fixed-dim": "#c6c6cf",
+                        "surface-tint": "#e9c400",
+                        "on-surface": "#e0e2e8",
+                        "primary": "#fff6df",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#5c5f67",
+                        "inverse-primary": "#705d00",
+                        "surface-container-highest": "#323539",
+                        "on-tertiary-fixed": "#191c22",
+                        "on-secondary-container": "#b4b4bd",
+                        "tertiary-fixed": "#e0e2ec",
+                        "surface-container-high": "#272a2e",
+                        "surface-container-low": "#181c20",
+                        "on-surface-variant": "#d0c6ab",
+                        "on-background": "#e0e2e8",
+                        "surface-bright": "#36393e",
+                        "primary-fixed-dim": "#e9c400",
+                        "surface-container-lowest": "#0b0f12",
+                        "background": "#101417",
+                        "inverse-surface": "#e0e2e8",
+                        "on-error-container": "#ffdad6",
+                        "inverse-on-surface": "#2d3135",
+                        "primary-fixed": "#ffe16d",
+                        "on-secondary-fixed": "#191b22",
+                        "on-tertiary": "#2d3038",
+                        "surface-container": "#1c2024",
+                        "on-tertiary-fixed-variant": "#44474f",
+                        "on-primary-fixed": "#221b00",
+                        "tertiary-container": "#d8d9e3",
+                        "on-secondary": "#2e3037",
+                        "tertiary-fixed-dim": "#c4c6d0",
+                        "tertiary": "#f5f5ff",
+                        "secondary-container": "#45464e",
+                        "outline-variant": "#4d4732",
+                        "primary-container": "#ffd700",
+                        "on-primary": "#3a3000",
+                        "secondary-fixed": "#e2e2eb",
+                        "outline": "#999077",
+                        "error": "#ffb4ab",
+                        "on-primary-container": "#705e00",
+                        "surface-dim": "#101417",
+                        "on-primary-fixed-variant": "#544600",
+                        "error-container": "#93000a",
+                        "surface-variant": "#323539",
+                        "on-secondary-fixed-variant": "#45464e",
+                        "surface": "#101417"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "edge-margin-desktop": "80px",
+                        "container-max": "1440px",
+                        "stack-unit": "8px",
+                        "edge-margin-mobile": "24px",
+                        "gutter": "32px"
+                    },
+                    "fontFamily": {
+                        "button": ["DM Sans"],
+                        "headline-md": ["Bodoni Moda"],
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "body-md": ["DM Sans"],
+                        "headline-xl": ["Bodoni Moda"],
+                        "label-caps": ["DM Sans"],
+                        "body-lg": ["DM Sans"],
+                        "headline-lg": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "button": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-mesh min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<!-- Header / Brand Section -->
+<header class="w-full flex flex-col items-center pt-12 pb-6 px-edge-margin-mobile md:pt-16 md:pb-8 md:px-edge-margin-desktop animate-in fade-in slide-in-from-top-4 duration-1000">
+<div class="mb-stack-unit">
+<span class="material-symbols-outlined text-surface-tint text-4xl md:text-5xl" style="font-variation-settings: 'FILL' 1;">
+                diamond
+            </span>
+</div>
+<h1 class="font-headline-md text-headline-md md:font-headline-lg md:text-headline-lg text-primary text-center tracking-tight mb-2">
+            Sahariyar Rahman Shop
+        </h1>
+<p class="font-label-caps text-[10px] md:text-label-caps text-on-surface-variant max-w-xs md:max-w-md text-center opacity-80 uppercase tracking-[0.2em]">
+            Management Portal
+        </p>
+</header>
+<!-- Main Content Area -->
+<main class="flex-grow flex flex-col items-center px-edge-margin-mobile md:px-edge-margin-desktop py-8 md:py-12">
+<div class="max-w-4xl w-full text-center mb-8 md:mb-16">
+<h2 class="font-headline-md text-2xl md:text-headline-md text-on-surface mb-3 md:mb-4">
+                Welcome back, Administrator
+            </h2>
+<p class="font-body-md text-body-md md:text-body-lg text-secondary max-w-2xl mx-auto opacity-70">
+                Choose your destination. Access the public marketplace to view customer experiences or enter the secure dashboard.
+            </p>
+</div>
+<!-- Portal Cards Grid - Stacks on mobile, 2 columns on desktop -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-gutter w-full max-w-container-max mx-auto h-full">
+<!-- Visit Public Shop Card -->
+<a class="group relative block active:scale-[0.98] transition-transform duration-200" href="{{DATA:SCREEN:SCREEN_15}}">
+<div class="glass-card inner-glow rounded-xl overflow-hidden flex flex-col h-[380px] md:h-[420px]">
+<div class="relative h-48 md:h-64 overflow-hidden">
+<img alt="Luxury Retail Space" class="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110" data-alt="A cinematic shot of a high-end fashion boutique interior with sleek minimalist displays. The lighting is low-key with golden spot accents highlighting luxury handbags and apparel. The space is modern, clean, and dominated by deep charcoal and gold tones, reflecting a premium editorial retail atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD53nvNtPgp_wXak-Elow5UZZbkU7Z5liiYCzfv4MBG3kGsLsftWEQZPy32p0YIRQHEtA1hKTRFbLVN8tdp9cHpl5mvfVo0GnQmuh8U8kVtC1KbGx4lHxBxhVWVnBQj9evTzsbcIDwZJ0Yh0rei9uSMnN2VPogZAcnZnhql5Df1AQAnXgjuz1k76YmP8pUNs4z6T2JqBuDpLPKQPnCxRARjXG5haKJG4hSIW9q2leuE6_rXJ-ICG1Km75jpThVDriJAaaQhFtsVADU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#101417] via-transparent to-transparent opacity-80"></div>
+</div>
+<div class="p-6 md:p-8 flex flex-col justify-between flex-grow">
+<div>
+<span class="font-label-caps text-[10px] md:text-label-caps text-surface-tint mb-1 md:mb-2 block uppercase tracking-widest">Marketplace</span>
+<h3 class="font-headline-md text-xl md:text-headline-md text-primary mb-2">Visit Public Shop</h3>
+<p class="font-body-md text-sm md:text-body-md text-secondary opacity-60">Browse the curated collections as a customer would.</p>
+</div>
+<div class="flex items-center justify-end">
+<span class="material-symbols-outlined text-surface-tint md:group-hover:translate-x-2 transition-transform duration-300 bg-surface-container-low p-2 rounded-full md:bg-transparent md:p-0">
+                                arrow_forward
+                            </span>
+</div>
+</div>
+</div>
+</a>
+<!-- Admin Dashboard Card -->
+<a class="group relative block active:scale-[0.98] transition-transform duration-200" href="{{DATA:SCREEN:SCREEN_13}}">
+<div class="glass-card inner-glow rounded-xl overflow-hidden flex flex-col h-[380px] md:h-[420px]">
+<div class="relative h-48 md:h-64 overflow-hidden">
+<img alt="Advanced Analytics Dashboard" class="w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-110" data-alt="A close-up view of a sophisticated digital interface displayed on a dark sleek monitor. The screen shows golden-hued data visualizations, bar graphs, and minimalist typography in a dark-mode UI. The atmosphere is professional and tech-focused, with soft bokeh of a modern office in the background, utilizing a nocturnal color palette of deep navies and electric golds." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHtE4bypwQocY8eNfaZthKq3sXixfr1EUG3sBqga-0fC7eOEz7FHDo2aPFfdJwK2qKR4H9wjXOUPS4P4aLXhcU4_rCW-kBHel7ENVf1_ATpzDSdxAEfL93dUJeVHwNAU49hZkOxx9S7cXbCMK1XDnkbUKBcLZNnSfdogm-RHz9iNvxyxyjiTsk_TTj0MHBNM40ZsioW_pEeOGI3ILgnf48tuFLBEDe1UXYFHXx0fdAl41bmoR16LQGERhDD5TIVDmvxf5vk3QybHE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#101417] via-transparent to-transparent opacity-80"></div>
+</div>
+<div class="p-6 md:p-8 flex flex-col justify-between flex-grow">
+<div>
+<span class="font-label-caps text-[10px] md:text-label-caps text-surface-tint mb-1 md:mb-2 block uppercase tracking-widest">Management</span>
+<h3 class="font-headline-md text-xl md:text-headline-md text-primary mb-2">Access Admin Dashboard</h3>
+<p class="font-body-md text-sm md:text-body-md text-secondary opacity-60">Manage orders, analytics, and configuration settings.</p>
+</div>
+<div class="flex items-center justify-end">
+<span class="material-symbols-outlined text-surface-tint md:group-hover:translate-x-2 transition-transform duration-300 bg-surface-container-low p-2 rounded-full md:bg-transparent md:p-0">
+                                settings_applications
+                            </span>
+</div>
+</div>
+</div>
+</a>
+</div>
+<!-- Footer Decoration -->
+<div class="mt-12 md:mt-section-gap w-full flex flex-col items-center opacity-40">
+<div class="h-[1px] w-24 md:w-32 bg-gradient-to-r from-transparent via-outline to-transparent mb-6 md:mb-8"></div>
+<p class="font-label-caps text-[10px] md:text-label-caps text-on-surface-variant text-center px-4">
+                © 2024 SAHARIYAR RAHMAN SHOP · SECURE PORTAL
+            </p>
+</div>
+</main>
+<!-- Background Orbs for Atmospheric Depth -->
+<div class="fixed top-[-10%] right-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-primary/5 rounded-full blur-[80px] md:blur-[120px] -z-10"></div>
+<div class="fixed bottom-[-10%] left-[-10%] w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-surface-tint/5 rounded-full blur-[100px] md:blur-[140px] -z-10"></div>
+<script>
+        // Micro-interaction: Subtle parallax on mouse move (Desktop only)
+        if (window.innerWidth >= 768) {
+            document.addEventListener('mousemove', (e) => {
+                const cards = document.querySelectorAll('.glass-card');
+                const x = e.clientX / window.innerWidth;
+                const y = e.clientY / window.innerHeight;
+
+                cards.forEach(card => {
+                    const rect = card.getBoundingClientRect();
+                    const cardX = rect.left + rect.width / 2;
+                    const cardY = rect.top + rect.height / 2;
+                    
+                    const angleX = (y - 0.5) * 10;
+                    const angleY = (x - 0.5) * -10;
+
+                    card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateY(${Math.sin(x * 10) * 5}px)`;
+                });
+            });
+
+            document.addEventListener('mouseleave', () => {
+                const cards = document.querySelectorAll('.glass-card');
+                cards.forEach(card => {
+                    card.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+                });
+            });
+        }
+    </script>
+</body></html>
