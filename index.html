@@ -1,22 +1,342 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sahariyar Rahman Shop</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Dashboard | Sahariyar Rahman Shop</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#4f453b",
+                        "tertiary": "#000000",
+                        "on-primary-container": "#848484",
+                        "secondary-container": "#f0e0d2",
+                        "on-surface-variant": "#4c4546",
+                        "surface-dim": "#dbdad5",
+                        "on-tertiary-fixed-variant": "#48473f",
+                        "secondary-fixed": "#f0e0d2",
+                        "surface-container-highest": "#e3e3de",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e9e8e3",
+                        "primary-fixed": "#e2e2e2",
+                        "on-tertiary-container": "#86847a",
+                        "surface-container-low": "#f5f4ef",
+                        "on-background": "#1b1c19",
+                        "secondary-fixed-dim": "#d3c4b7",
+                        "error": "#ba1a1a",
+                        "surface": "#faf9f4",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#5e5e5e",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-surface": "#1b1c19",
+                        "tertiary-container": "#1c1c15",
+                        "on-secondary-fixed": "#221a12",
+                        "on-secondary-container": "#6e6258",
+                        "outline": "#7e7576",
+                        "inverse-surface": "#30312e",
+                        "surface-bright": "#faf9f4",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#e6e2d7",
+                        "tertiary-fixed-dim": "#cac6bc",
+                        "on-primary-fixed": "#1b1b1b",
+                        "background": "#faf9f4",
+                        "on-tertiary-fixed": "#1c1c15",
+                        "primary-container": "#1b1b1b",
+                        "outline-variant": "#cfc4c5",
+                        "surface-container": "#efeee9",
+                        "inverse-primary": "#c6c6c6",
+                        "primary": "#000000",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f2f1ec",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e3e3de",
+                        "secondary": "#685c52"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "gutter": "32px",
+                        "unit": "4px",
+                        "section-padding": "120px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Bodoni Moda"],
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "display-md": ["Bodoni Moda"],
+                        "display-lg": ["Bodoni Moda"],
+                        "body-md": ["Hanken Grotesk"],
+                        "title-lg": ["Hanken Grotesk"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "500"}],
+                        "display-md": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                        "display-lg": ["80px", {"lineHeight": "88px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #faf9f4;
+            color: #1b1c19;
+            -webkit-font-smoothing: antialiased;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #efeee9;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #000000;
+        }
+        .input-underline {
+            border: none;
+            border-bottom: 1px solid #000000;
+            background: transparent;
+            padding: 8px 0;
+            border-radius: 0;
+        }
+        .input-underline:focus {
+            box-shadow: none;
+            border-bottom-width: 2px;
+            outline: none;
+        }
+    </style>
 </head>
-<body class="bg-black text-white p-6">
-    <div class="max-w-sm mx-auto text-center py-10">
-        <h1 class="text-4xl font-serif mb-6">Curated Excellence</h1>
-        <p class="mb-10 text-gray-400">Discover our latest collection of handcrafted luxury goods.</p>
-        
-        <div class="border border-gray-700 p-6">
-            <div class="h-64 bg-gray-800 mb-4"></div>
-            <h3 class="text-xl mb-2">Premium Wool Coat</h3>
-            <p class="mb-6">BDT 45,000</p>
-            <a href="https://wa.me/8801765024846" class="block w-full bg-white text-black py-3 uppercase text-sm font-bold tracking-widest hover:bg-gray-200 transition">Order via WhatsApp</a>
-        </div>
-    </div>
-</body>
-</html>
+<body class="font-body-md text-body-md">
+<!-- Top Navigation Bar -->
+<nav class="bg-surface dark:bg-surface border-b border-primary dark:border-primary fixed top-0 w-full z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop h-24 max-w-container-max mx-auto">
+<div class="flex items-center gap-12">
+<h1 class="font-display-md text-display-md text-primary dark:text-primary tracking-tighter">Sahariyar Rahman Shop</h1>
+<div class="hidden md:flex gap-8">
+<a class="font-label-md text-label-md uppercase tracking-widest text-primary font-bold border-b border-primary pb-1" href="#">Collections</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Boutique</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Journal</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-primary" data-icon="shopping_bag">shopping_bag</button>
+<button class="material-symbols-outlined text-primary" data-icon="person">person</button>
+</div>
+</div>
+</nav>
+<main class="pt-32 pb-section-padding px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Left Column: Product Addition Form -->
+<div class="col-span-12 lg:col-span-8">
+<header class="mb-12">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Admin Control</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-2">Add New Masterpiece</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-4 max-w-xl">Curate your digital storefront with unlimited precision. Every detail added here defines the luxury experience for our collectors.</p>
+</header>
+<form class="space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md uppercase tracking-widest">Product Name</label>
+<input class="input-underline font-body-lg text-body-lg" placeholder="e.g., The Obsidian Vessel" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md uppercase tracking-widest">Price (BDT)</label>
+<input class="input-underline font-body-lg text-body-lg" placeholder="125,000" type="text"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md uppercase tracking-widest">Category</label>
+<select class="input-underline font-body-lg text-body-lg appearance-none cursor-pointer">
+<option>Sculptural Objects</option>
+<option>Textile Arts</option>
+<option>Limited Print Editions</option>
+<option>Architectural Elements</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md uppercase tracking-widest">Description</label>
+<textarea class="input-underline font-body-lg text-body-lg resize-none" placeholder="Describe the craftsmanship and narrative behind this piece..." rows="4"></textarea>
+</div>
+<div class="border-2 border-dashed border-primary/20 p-12 flex flex-col items-center justify-center gap-4 bg-surface-container-low group hover:border-primary transition-colors cursor-pointer relative overflow-hidden">
+<div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity">
+
+</div>
+<span class="material-symbols-outlined text-4xl" data-icon="cloud_upload">cloud_upload</span>
+<div class="text-center z-10">
+<p class="font-title-lg text-title-lg">High-Res Visual Asset</p>
+<p class="font-label-sm text-label-sm uppercase text-on-surface-variant mt-2">Drag and drop or click to browse (TIFF, PNG, JPG)</p>
+</div>
+<input class="absolute inset-0 opacity-0 cursor-pointer" type="file"/>
+</div>
+<div class="flex justify-start">
+<button class="bg-primary text-on-primary font-label-md text-label-md uppercase tracking-widest px-12 py-5 border border-primary hover:bg-surface hover:text-primary transition-all duration-300" type="submit">
+                            Publish to Shop
+                        </button>
+</div>
+</form>
+</div>
+<!-- Right Column: Activity Feed & Insights -->
+<div class="col-span-12 lg:col-span-4 space-y-12">
+<!-- Recent Orders -->
+<section class="border border-primary p-8 bg-surface">
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-title-lg text-title-lg">Recent Orders</h3>
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+</div>
+<div class="space-y-6 custom-scrollbar max-h-[400px] overflow-y-auto pr-4">
+<div class="flex justify-between items-start border-b border-outline-variant pb-4">
+<div>
+<p class="font-label-md text-label-md">ORD-9821</p>
+<p class="font-body-md text-body-md text-on-surface-variant">A. Rahman — Dhaka</p>
+</div>
+<p class="font-title-lg text-title-lg">৳45,000</p>
+</div>
+<div class="flex justify-between items-start border-b border-outline-variant pb-4">
+<div>
+<p class="font-label-md text-label-md">ORD-9820</p>
+<p class="font-body-md text-body-md text-on-surface-variant">S. Islam — Sylhet</p>
+</div>
+<p class="font-title-lg text-title-lg">৳12,500</p>
+</div>
+<div class="flex justify-between items-start border-b border-outline-variant pb-4">
+<div>
+<p class="font-label-md text-label-md">ORD-9819</p>
+<p class="font-body-md text-body-md text-on-surface-variant">K. Ahmed — Chittagong</p>
+</div>
+<p class="font-title-lg text-title-lg">৳89,000</p>
+</div>
+</div>
+<button class="w-full mt-6 font-label-sm text-label-sm uppercase tracking-widest py-3 border border-primary/20 hover:border-primary transition-colors">View All Orders</button>
+</section>
+<!-- Chat Inquiries -->
+<section class="border border-primary p-8 bg-surface">
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-title-lg text-title-lg">Active Inquiries</h3>
+<span class="relative">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full"></span>
+</span>
+</div>
+<div class="space-y-6">
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="w-12 h-12 bg-surface-container-high overflow-hidden border border-primary/10">
+<img class="w-full h-full object-cover grayscale" data-alt="A professional studio portrait of a man in a black turtleneck against a minimalist cream background. The lighting is soft and high-key, emphasizing clean lines and a modern luxury aesthetic. His expression is calm and engaged, reflecting a high-end customer profile. The image has a slight grain and editorial feel, consistent with a premium gallery brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLgauFywZB3BZ0krw6WSc_yRXjJXklMOBXYjrE5PcC21Zlvf27O7QT04kpxbvub4b4v6fU-dBx1Y0peoEM5HTqXeHc4zwZBe9yCFE-ZqxEkN8PZ2qV32XaErvIlmUfvxqEb7nqbw-SiqRo1DI8RfvfW_6r0FFNzWXu0K0WwdtC13_oayfQ-5mLF7jv9KulbBTnishLT5sN1x5I9FVVdhyYAtNtSKghZcvAy7fBrunkcFm-dgby2VKtKA2mmCVse9VdW25yz8FoaHs"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<p class="font-label-md text-label-md">Farhan Zarif</p>
+<span class="text-[10px] text-on-surface-variant uppercase">2m ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">Is the 'Obsidian Vessel' available for international shipping?</p>
+</div>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="w-12 h-12 bg-surface-container-high overflow-hidden border border-primary/10">
+<img class="w-full h-full object-cover grayscale" data-alt="A sophisticated portrait of a woman with an elegant, minimalist style, photographed against a neutral architectural backdrop. The image uses natural high-contrast lighting to create deep blacks and crisp whites. She represents a discerning collector of artisanal goods, fitting the silent luxury theme perfectly." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMTNInMzXJFC30nfgudng0Oi9a0ajN_o7mpiJpERFwkEsaR1uklORXYXallK5KsT47fs08oMjGkS5rx1O7S-i_SOswDNPh-ijGGou3mz2EYW-NjrgbmH6ek3P8-7XPZ6Zng5drGULNGCerCZjw336xJcAS7FXwElbgLsenXnx-XUmDs35dzSncHnPKdlfA38Ma0Ohl2qoLSGQHisnRK-fltWecmD4Ojr8RggIFnnrgkop3Sl58B-raq0EFCaNk6y4LSXv8MtZYm9k"/>
+</div>
+<div class="flex-1">
+<div class="flex justify-between">
+<p class="font-label-md text-label-md">Nadia Sultana</p>
+<span class="text-[10px] text-on-surface-variant uppercase">1h ago</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant truncate">I would like to request a commission for the winter collection.</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 font-label-sm text-label-sm uppercase tracking-widest py-3 bg-primary text-on-primary border border-primary hover:bg-surface hover:text-primary transition-all">Go to Messenger</button>
+</section>
+<!-- Quick Stats -->
+<div class="grid grid-cols-2 gap-4">
+<div class="p-6 bg-surface-container-low border border-primary/5">
+<p class="font-label-sm text-label-sm uppercase text-on-surface-variant">Total Value</p>
+<p class="font-headline-md text-headline-md mt-1">৳2.4M</p>
+</div>
+<div class="p-6 bg-surface-container-low border border-primary/5">
+<p class="font-label-sm text-label-sm uppercase text-on-surface-variant">Views (24h)</p>
+<p class="font-headline-md text-headline-md mt-1">1,842</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Section -->
+<footer class="bg-surface dark:bg-surface border-t border-primary dark:border-primary">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-padding w-full max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<h2 class="font-headline-lg text-headline-lg text-primary">SR Shop.</h2>
+<p class="mt-6 font-body-md text-body-md text-on-secondary-container max-w-xs">Curating the finest in artisanal craftsmanship and silent luxury for the modern collector.</p>
+</div>
+<div class="flex flex-col gap-4">
+<p class="font-label-md text-label-md uppercase tracking-widest text-primary mb-2">Legal</p>
+<a class="font-label-sm text-label-sm uppercase text-on-secondary-container hover:text-primary transition-all underline underline-offset-4" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm uppercase text-on-secondary-container hover:text-primary transition-all underline underline-offset-4" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm uppercase text-on-secondary-container hover:text-primary transition-all underline underline-offset-4" href="#">Shipping &amp; Returns</a>
+</div>
+<div class="flex flex-col gap-4">
+<p class="font-label-md text-label-md uppercase tracking-widest text-primary mb-2">Connect</p>
+<a class="font-label-sm text-label-sm uppercase text-on-secondary-container hover:text-primary transition-all underline underline-offset-4" href="#">Instagram</a>
+<a class="font-label-sm text-label-sm uppercase text-on-secondary-container hover:text-primary transition-all underline underline-offset-4" href="#">Archive</a>
+<a class="font-label-sm text-label-sm uppercase text-on-secondary-container hover:text-primary transition-all underline underline-offset-4" href="#">Contact Us</a>
+</div>
+<div class="flex flex-col justify-end">
+<p class="font-label-sm text-label-sm uppercase text-on-secondary-container opacity-50">© 2024 Sahariyar Rahman Shop. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for form focus
+        const inputs = document.querySelectorAll('.input-underline');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('label').classList.add('text-primary');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.querySelector('label').classList.remove('text-primary');
+            });
+        });
+
+        // Simple published feedback simulation
+        const publishBtn = document.querySelector('button[type="submit"]');
+        publishBtn?.addEventListener('click', (e) => {
+            e.preventDefault();
+            publishBtn.innerText = "Processing...";
+            setTimeout(() => {
+                publishBtn.innerText = "Published Successfully";
+                publishBtn.classList.remove('bg-primary');
+                publishBtn.classList.add('bg-green-800', 'border-green-800');
+                setTimeout(() => {
+                    publishBtn.innerText = "Publish to Shop";
+                    publishBtn.classList.add('bg-primary');
+                    publishBtn.classList.remove('bg-green-800', 'border-green-800');
+                }, 3000);
+            }, 1200);
+        });
+    </script>
+</body></html>
