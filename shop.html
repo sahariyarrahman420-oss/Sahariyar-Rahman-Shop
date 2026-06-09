@@ -1,64 +1,342 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Sahariyar Rahman Shop - Marketplace</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-    <style>
-        body { background-color: #101417; color: #e0e2e8; overflow-x: hidden; }
-        .glass-card { background: rgba(28, 32, 36, 0.4); backdrop-filter: blur(40px); -webkit-backdrop-filter: blur(40px); border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); }
-        .inner-glow { box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.1); }
-        .bg-mesh { background-image: radial-gradient(at 0% 0%, rgba(233, 196, 0, 0.05) 0px, transparent 50%), radial-gradient(at 100% 100%, rgba(112, 93, 0, 0.05) 0px, transparent 50%); }
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sahariyar Rahman Shop | The Art of Curation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#4f453b",
+                        "tertiary": "#000000",
+                        "on-primary-container": "#848484",
+                        "secondary-container": "#f0e0d2",
+                        "on-surface-variant": "#4c4546",
+                        "surface-dim": "#dbdad5",
+                        "on-tertiary-fixed-variant": "#48473f",
+                        "secondary-fixed": "#f0e0d2",
+                        "surface-container-highest": "#e3e3de",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e9e8e3",
+                        "primary-fixed": "#e2e2e2",
+                        "on-tertiary-container": "#86847a",
+                        "surface-container-low": "#f5f4ef",
+                        "on-background": "#1b1c19",
+                        "secondary-fixed-dim": "#d3c4b7",
+                        "error": "#ba1a1a",
+                        "surface": "#faf9f4",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#5e5e5e",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "on-surface": "#1b1c19",
+                        "tertiary-container": "#1c1c15",
+                        "on-secondary-fixed": "#221a12",
+                        "on-secondary-container": "#6e6258",
+                        "outline": "#7e7576",
+                        "inverse-surface": "#30312e",
+                        "surface-bright": "#faf9f4",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#e6e2d7",
+                        "tertiary-fixed-dim": "#cac6bc",
+                        "on-primary-fixed": "#1b1b1b",
+                        "background": "#faf9f4",
+                        "on-tertiary-fixed": "#1c1c15",
+                        "primary-container": "#1b1b1b",
+                        "outline-variant": "#cfc4c5",
+                        "surface-container": "#efeee9",
+                        "inverse-primary": "#c6c6c6",
+                        "primary": "#000000",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#f2f1ec",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e3e3de",
+                        "secondary": "#685c52"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "gutter": "32px",
+                        "unit": "4px",
+                        "section-padding": "120px",
+                        "container-max": "1440px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Bodoni Moda"],
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "display-md": ["Bodoni Moda"],
+                        "display-lg": ["Bodoni Moda"],
+                        "body-md": ["Hanken Grotesk"],
+                        "title-lg": ["Hanken Grotesk"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "label-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "500"}],
+                        "display-md": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                        "display-lg": ["80px", {"lineHeight": "88px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "title-lg": ["20px", {"lineHeight": "28px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #faf9f4; /* Cream surface from palette */
+            color: #000000; /* Deep black primary */
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .reveal-element {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+        .reveal-element.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .nav-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.3s ease;
+        }
+        .nav-underline:hover::after {
+            width: 100%;
+        }
+        ::placeholder {
+            color: #848484;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.75rem;
+        }
     </style>
 </head>
-<body class="bg-mesh min-h-screen flex flex-col justify-between font-sans">
-    <header class="w-full px-6 py-4 flex justify-between items-center max-w-7xl mx-auto border-b border-gray-900/50">
-        <div class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-yellow-500 text-3xl">storefront</span>
-            <a href="index.html" class="text-xl font-semibold tracking-wider font-serif bg-gradient-to-r from-yellow-400 to-yellow-100 bg-clip-text text-transparent">SR PORTAL</a>
-        </div>
-        <a href="index.html" class="text-sm text-gray-400 hover:text-yellow-400 transition-colors flex items-center gap-1">
-            <span class="material-symbols-outlined text-sm">arrow_back</span> Back to Home
-        </a>
-    </header>
+<body class="selection:bg-primary-fixed selection:text-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-sm border-b border-primary">
+<div class="flex justify-between items-center w-full px-margin-desktop h-24 max-w-container-max mx-auto">
+<!-- Brand -->
+<a class="font-display-md text-display-md text-primary tracking-tighter" href="#">
+                Sahariyar Rahman Shop
+            </a>
+<!-- Navigation Links -->
+<nav class="hidden md:flex gap-10">
+<a class="font-label-md text-label-md uppercase tracking-widest text-primary font-bold border-b border-primary pb-1" href="#">Collections</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 relative nav-underline" href="#">Boutique</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300 relative nav-underline" href="#">Journal</a>
+</nav>
+<!-- Trailing Icons -->
+<div class="flex items-center gap-6">
+<button class="text-primary hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+</button>
+<button class="text-primary hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+<button class="text-primary hover:opacity-70 transition-opacity relative">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="absolute -top-1 -right-1 w-2 h-2 bg-primary rounded-full"></span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col justify-center items-center px-margin-desktop pt-24 overflow-hidden">
+<div class="z-10 text-center max-w-4xl reveal-element">
+<span class="font-label-md text-label-md uppercase tracking-[0.4em] mb-8 block text-on-surface-variant">Established 2024</span>
+<h1 class="font-display-lg text-display-lg md:text-[120px] leading-tight mb-12 tracking-tighter">
+                    The Art of <br/><span class="italic font-light">Curation</span>
+</h1>
+<!-- Statement & Search -->
+<div class="max-w-xl mx-auto space-y-12">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        A dedicated pursuit of material integrity and silent luxury. Our space serves as a gallery for the discerning collector, where every object tells a story of artisanal mastery.
+                    </p>
+<div class="relative w-full max-w-md mx-auto group">
+<input class="w-full bg-transparent border-b border-primary py-4 px-2 focus:outline-none focus:border-tertiary transition-colors font-label-md text-label-md" placeholder="Search the collection..." type="text"/>
+<span class="material-symbols-outlined absolute right-2 top-4 text-primary opacity-40 group-focus-within:opacity-100 transition-opacity" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Subtle Decorative Element -->
+<div class="absolute bottom-24 left-margin-desktop reveal-element transition-delay-300">
+<span class="material-symbols-outlined text-[80px] opacity-5" data-icon="architecture">architecture</span>
+</div>
+</section>
+<!-- Category Grid (Clean Text/Minimal Icons) -->
+<section class="px-margin-desktop py-section-padding border-t border-primary">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Apparel -->
+<a class="group block border border-primary p-12 aspect-square flex flex-col justify-between hover:bg-primary hover:text-surface transition-all duration-500" href="#">
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm uppercase tracking-widest">01</span>
+<span class="material-symbols-outlined text-4xl group-hover:rotate-12 transition-transform" data-icon="styler">styler</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg mb-4">Apparel</h3>
+<p class="font-body-md text-body-md opacity-60 group-hover:opacity-100 transition-opacity">Garments defined by architectural silhouette and raw fiber quality.</p>
+</div>
+</a>
+<!-- Accessories -->
+<a class="group block border border-primary p-12 aspect-square flex flex-col justify-between hover:bg-primary hover:text-surface transition-all duration-500" href="#">
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm uppercase tracking-widest">02</span>
+<span class="material-symbols-outlined text-4xl group-hover:rotate-12 transition-transform" data-icon="diamond">diamond</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg mb-4">Accessories</h3>
+<p class="font-body-md text-body-md opacity-60 group-hover:opacity-100 transition-opacity">Precise details that anchor the modern uniform with timeless weight.</p>
+</div>
+</a>
+<!-- Objects -->
+<a class="group block border border-primary p-12 aspect-square flex flex-col justify-between hover:bg-primary hover:text-surface transition-all duration-500" href="#">
+<div class="flex justify-between items-start">
+<span class="font-label-sm text-label-sm uppercase tracking-widest">03</span>
+<span class="material-symbols-outlined text-4xl group-hover:rotate-12 transition-transform" data-icon="vases">cases</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-headline-lg mb-4">Objects</h3>
+<p class="font-body-md text-body-md opacity-60 group-hover:opacity-100 transition-opacity">Curated artifacts for the living space, bridging form and function.</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- Service Features -->
+<section class="bg-primary text-surface py-section-padding px-margin-desktop overflow-hidden">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="reveal-element">
+<span class="font-label-md text-label-md uppercase tracking-widest mb-6 block text-primary-fixed-dim">Concierge Experience</span>
+<h2 class="font-display-md text-display-md leading-tight mb-8">Seamless <br/>Exclusivity.</h2>
+<p class="font-body-lg text-body-lg text-surface-container-high max-w-md mb-12">
+                        We facilitate high-value acquisitions through secure, integrated digital payment frameworks and direct professional counsel.
+                    </p>
+<div class="space-y-8">
+<div class="flex items-start gap-6 group">
+<div class="w-12 h-12 border border-surface-container-high flex items-center justify-center group-hover:bg-surface group-hover:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg mb-2">bKash Integration</h4>
+<p class="font-body-md text-body-md text-surface-container-high">Encrypted, one-tap payment processing for instantaneous high-value settlements.</p>
+</div>
+</div>
+<div class="flex items-start gap-6 group">
+<div class="w-12 h-12 border border-surface-container-high flex items-center justify-center group-hover:bg-surface group-hover:text-primary transition-all">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg mb-2">Concierge Chat</h4>
+<p class="font-body-md text-body-md text-surface-container-high">Direct access to our specialists for styling advice and order tracking.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative aspect-[4/5] overflow-hidden reveal-element">
+<img class="w-full h-full object-cover grayscale brightness-90 hover:scale-105 transition-transform duration-1000" data-alt="A high-end minimalist interior showing a single marble pedestal with a sleek black designer handbag under focused spotlight. The background is a clean, off-white gallery wall. The lighting is dramatic with soft shadows, highlighting the luxury texture of the leather and the cold elegance of the stone. Deep blacks and warm cream tones dominate the composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVUfuy-nRseR3k0PwNzrPXmcsoHo8cwoeHF7Tw7u0ZgXnSee8pGhSDZcUM77aRPCT86ILJpzRoTgIJKQr8JrzaNSgoVbvAyjZpEYLQk48wwIvWBJgHtRE6FkNOxiuvGyw4ARCJj9-gR-_qOJ0iL-o2rOIdPrKNA594mF0sR7Pk4rIr8_gw3PwYuq4D-Youh9-P_1zx_jGrzy2cWNIZfYnXabbVhkK7rbewaVmMwslxexO1OqTz-r9IIivrMt9udvfAubbgxObtMGg"/>
+</div>
+</div>
+</section>
+<!-- Newsletter / Editorial -->
+<section class="px-margin-desktop py-section-padding bg-surface">
+<div class="max-w-3xl mx-auto text-center reveal-element">
+<h2 class="font-headline-md text-headline-md mb-8">The Weekly Archive</h2>
+<p class="font-body-md text-body-md mb-12 text-on-surface-variant">
+                    Join our inner circle for early access to curated drops, artisanal stories, and exclusive digital journals.
+                </p>
+<form class="flex flex-col md:flex-row gap-4 justify-center items-end">
+<div class="flex-grow max-w-md w-full">
+<input class="w-full bg-transparent border-b border-primary py-3 focus:outline-none font-label-md uppercase" placeholder="email@address.com" type="email"/>
+</div>
+<button class="bg-primary text-surface px-12 py-3 font-label-md uppercase tracking-widest hover:bg-surface hover:text-primary border border-primary transition-all duration-300" type="submit">
+                        Subscribe
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-primary bg-surface py-section-padding">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop w-full max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Sahariyar Rahman Shop</h2>
+<p class="font-body-md text-body-md max-w-xs text-on-surface-variant mb-12">Curating the exceptional. Defining the silent luxury for the contemporary pioneer.</p>
+<p class="font-label-sm text-label-sm uppercase text-on-secondary-container">© 2024 Sahariyar Rahman Shop. All Rights Reserved.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-md text-label-md uppercase tracking-widest mb-4">Navigate</h5>
+<a class="font-label-sm text-label-sm uppercase text-on-secondary-container hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm uppercase text-on-secondary-container hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm uppercase text-on-secondary-container hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Shipping &amp; Returns</a>
+<a class="font-label-sm text-label-sm uppercase text-on-secondary-container hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Contact Us</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-md text-label-md uppercase tracking-widest mb-4">Connect</h5>
+<a class="font-label-sm text-label-sm uppercase text-on-secondary-container hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Instagram</a>
+<a class="font-label-sm text-label-sm uppercase text-on-secondary-container hover:text-primary hover:underline underline-offset-4 transition-all" href="#">Archive</a>
+</div>
+</div>
+</footer>
+<script>
+        // Intersection Observer for reveal animations
+        const observerOptions = {
+            root: null,
+            threshold: 0.1,
+            rootMargin: '0px'
+        };
 
-    <main class="flex-1 max-w-7xl w-full mx-auto px-4 py-12">
-        <h2 class="text-3xl font-serif text-center mb-12 bg-gradient-to-r from-yellow-400 to-amber-200 bg-clip-text text-transparent">Available Products</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="glass-card inner-glow p-6 rounded-2xl flex flex-col justify-between relative overflow-hidden group">
-                <div>
-                    <div class="w-full h-48 bg-gradient-to-br from-yellow-500/10 to-amber-600/20 rounded-xl mb-4 flex items-center justify-center border border-yellow-500/10">
-                        <span class="material-symbols-outlined text-5xl text-yellow-500/40">shield_person</span>
-                    </div>
-                    <h3 class="text-xl font-medium mb-2 text-white">Premium Account 1</h3>
-                    <p class="text-gray-400 text-sm mb-6">High-quality premium access account with full validity and instant delivery support.</p>
-                </div>
-                <div class="flex justify-between items-center pt-4 border-t border-gray-800">
-                    <span class="text-yellow-400 font-bold text-xl">৳ ৫০০</span>
-                    <a href="https://wa.me/8801700000000" class="px-5 py-2 bg-gradient-to-r from-yellow-500 to-amber-600 text-black text-sm font-medium rounded-xl">Buy Now</a>
-                </div>
-            </div>
-            <div class="glass-card inner-glow p-6 rounded-2xl flex flex-col justify-between relative overflow-hidden group">
-                <div>
-                    <div class="w-full h-48 bg-gradient-to-br from-yellow-500/10 to-amber-600/20 rounded-xl mb-4 flex items-center justify-center border border-yellow-500/10">
-                        <span class="material-symbols-outlined text-5xl text-yellow-500/40">build</span>
-                    </div>
-                    <h3 class="text-xl font-medium mb-2 text-white">Custom Premium Tool</h3>
-                    <p class="text-gray-400 text-sm mb-6">Exclusive customized digital tool tailored for your specific requirements and work.</p>
-                </div>
-                <div class="flex justify-between items-center pt-4 border-t border-gray-800">
-                    <span class="text-yellow-400 font-bold text-xl">৳ ১,০০০</span>
-                    <a href="https://wa.me/8801700000000" class="px-5 py-2 bg-gradient-to-r from-yellow-500 to-amber-600 text-black text-sm font-medium rounded-xl">Buy Now</a>
-                </div>
-            </div>
-        </div>
-    </main>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
 
-    <footer class="w-full text-center py-6 text-xs text-gray-500 tracking-widest border-t border-gray-900/50">
-        © 2026 SAHARIYAR RAHMAN. ALL RIGHTS RESERVED.
-    </footer>
-</body>
-</html>
+        document.querySelectorAll('.reveal-element').forEach(el => observer.observe(el));
+
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>
