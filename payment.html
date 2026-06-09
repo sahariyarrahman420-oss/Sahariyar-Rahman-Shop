@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fcf9f8;
+            color: #1c1b1b;
+            -webkit-font-smoothing: antialiased;
+        }
+        .hairline-border {
+            border: 0.5px solid #1c1b1b;
+        }
+        .bKash-accent {
+            color: #D12053;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-tint": "#5e604d",
+                    "surface-container-high": "#eae7e7",
+                    "tertiary-container": "#f3f3f3",
+                    "on-primary-container": "#6f705c",
+                    "surface-container": "#f0eded",
+                    "primary": "#5e604d",
+                    "tertiary": "#5d5f5f",
+                    "inverse-on-surface": "#f3f0ef",
+                    "background": "#fcf9f8",
+                    "primary-fixed": "#e4e4cc",
+                    "on-tertiary-container": "#6d6f6f",
+                    "primary-fixed-dim": "#c8c8b0",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#e2e2e2",
+                    "on-surface": "#1c1b1b",
+                    "surface-container-low": "#f6f3f2",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "inverse-primary": "#c8c8b0",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#fcf9f8",
+                    "secondary-fixed-dim": "#c6c6c6",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#313030",
+                    "error-container": "#ffdad6",
+                    "on-background": "#1c1b1b",
+                    "outline-variant": "#c8c7bc",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed": "#1b1b1b",
+                    "on-primary-fixed": "#1b1d0e",
+                    "surface-bright": "#fcf9f8",
+                    "on-primary-fixed-variant": "#474836",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "outline": "#78776e",
+                    "primary-container": "#f5f5dc",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-surface-variant": "#47473f",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "on-secondary-fixed-variant": "#474747",
+                    "on-secondary-container": "#646464",
+                    "surface-dim": "#dcd9d9",
+                    "surface-variant": "#e5e2e1",
+                    "secondary-fixed": "#e2e2e2",
+                    "on-primary": "#ffffff",
+                    "secondary": "#5e5e5e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "section-gap": "120px",
+                    "margin-mobile": "20px",
+                    "unit": "4px",
+                    "margin-desktop": "80px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "body-md": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "headline-md": ["EB Garamond"],
+                    "headline-lg-mobile": ["EB Garamond"],
+                    "display-lg": ["EB Garamond"],
+                    "button": ["Hanken Grotesk"],
+                    "headline-lg": ["EB Garamond"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                    "button": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar (Shared Component Identity) -->
+<header class="bg-surface border-b border-primary fixed top-0 w-full z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop h-24 max-w-container-max mx-auto">
+<div class="flex items-center gap-8">
+<h1 class="font-display-md text-[32px] text-primary tracking-tighter">Sahariyar Rahman Shop</h1>
+</div>
+<nav class="hidden md:flex items-center gap-12">
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Collections</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Boutique</a>
+<a class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">Journal</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-primary hover:opacity-70 transition-opacity" data-icon="shopping_bag">shopping_bag</button>
+<button class="material-symbols-outlined text-primary hover:opacity-70 transition-opacity" data-icon="person">person</button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-4xl mx-auto">
+<!-- Confirmation Hero Section -->
+<section class="text-center mb-16 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+<div class="inline-flex items-center justify-center w-20 h-20 mb-8 border border-primary rounded-full">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="check_circle">check_circle</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg mb-4">Thank You for Your Patronage</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mx-auto">
+                Your order has been confirmed. A confirmation message has been sent to you.
+            </p>
+</section>
+<!-- Order Identity -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-12 border-y border-primary/20 py-12">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-2 uppercase">Order Identification</span>
+<p class="font-headline-md text-headline-md">SR-2024-91823-B</p>
+</div>
+<div class="md:text-right">
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-2 uppercase">Order Date</span>
+<p class="font-body-lg text-body-lg">October 24, 2024</p>
+</div>
+</div>
+<!-- Order Summary & Payment -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<!-- Items Summary -->
+<div class="md:col-span-7">
+<h3 class="font-label-caps text-label-caps mb-8 uppercase tracking-widest">Summary of Purchase</h3>
+<div class="space-y-6">
+<!-- Item 1 -->
+<div class="flex gap-6 pb-6 border-b border-primary/10">
+<div class="w-24 h-32 bg-surface-container overflow-hidden">
+<img alt="Premium Wool Coat" class="w-full h-full object-cover grayscale" data-alt="A studio photograph of a premium, heavy-weight minimalist wool overcoat in charcoal grey, presented against a clean cream-colored background. The lighting is soft and directional, highlighting the rich texture of the fabric and the precision of the stitching. This image evokes an atmosphere of quiet luxury and high-end craftsmanship consistent with a sophisticated fashion boutique's aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtV9b8NDxPzMoCUrPgNklSr8ZTJfYKfezJf41LiAtTNC1cFMl8Erm4xvBOekr3O6ay14bISWfGNMLlYXcs_5Ne7HtSnricpppqA9Ab36W8uzgvQCACE3IYrIyhQBRnLrkhi4ACZqcoU1TnT6Q4FJ-C5cnarX6o_qnNdZpyCIIqkcuhhcNxCV4Hr2odJnjpLDNvab-AcDgzGotd1_7r6-z107ALDrVdsZEvnJA39dy2LoQ4XDGjXo83id-UsH1ErQC_bBe2Nzs3Dpo"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-body-lg text-body-lg">Premium Wool Sculptural Coat</h4>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Size: M | Color: Charcoal</span>
+</div>
+<p class="font-body-md text-body-md">BDT 45,000</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-6 pb-6 border-b border-primary/10">
+<div class="w-24 h-32 bg-surface-container overflow-hidden">
+<img alt="Limited Edition Timepiece" class="w-full h-full object-cover grayscale" data-alt="A high-key, minimalist product shot of a luxury watch with a leather strap on a white marble surface. The lighting is bright and airy, emphasizing the clean lines and metallic finish of the watch face. The overall composition is balanced and elegant, reflecting a premium e-commerce brand's commitment to high-quality materials and refined visual presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6XCltBgFun8LaJJi-tLBhPInkLn7nUPZX06hpguoQrnQDtISYceeidRHbS1dUFWs0rJWRQXfVJGINRYd1CR9FKMo7GpJ7HA0E8L03kxYRGdzUqYLyiHiv3n_lVZRW0HsQ1G2_dxshlycQ2g67aBI_S6XSj1hznTu-003KUlUYkzani_i-4qK6d_oJAq8kwJemafpp6u3y3htxMo--tqPC8hdjqJSpC8EFHc1jWhEKInoStgz0_5aMo1345eS9hRS82FEI4F6GSZ0"/>
+</div>
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<h4 class="font-body-lg text-body-lg">Limited Edition Heritage Timepiece</h4>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Movement: Automatic</span>
+</div>
+<p class="font-body-md text-body-md">BDT 120,000</p>
+</div>
+</div>
+</div>
+<div class="mt-8 space-y-2">
+<div class="flex justify-between font-body-md">
+<span>Subtotal</span>
+<span>BDT 165,000</span>
+</div>
+<div class="flex justify-between font-body-md">
+<span>Shipping</span>
+<span>BDT 500</span>
+</div>
+<div class="flex justify-between font-headline-md pt-4 border-t border-primary">
+<span>Total Amount Paid</span>
+<span>BDT 165,500</span>
+</div>
+</div>
+</div>
+<!-- Transaction Details -->
+<div class="md:col-span-5">
+<div class="p-8 bg-surface-container-low hairline-border">
+<h3 class="font-label-caps text-label-caps mb-6 uppercase tracking-widest">Transaction Method</h3>
+<div class="mb-8 p-4 bg-white border border-primary/20 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<!-- bKash Logo Placeholder -->
+<div class="w-10 h-10 rounded bg-[#D12053] flex items-center justify-center text-white font-bold text-xs uppercase italic">
+                                bKash
+                            </div>
+<div>
+<p class="font-body-md font-bold">bKash Payment</p>
+<p class="font-label-caps text-[10px] text-on-surface-variant">TRANSACTION VERIFIED</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#D12053]" data-icon="verified" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<div class="space-y-6">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Transaction ID</span>
+<p class="font-body-md tracking-wider">BK8291X00LPS2</p>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Shipping Destination</span>
+<p class="font-body-md">Sahariyar Rahman<br/>Gulshan 2, House 14, Road 52<br/>Dhaka 1212, Bangladesh</p>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Estimated Delivery</span>
+<p class="font-body-md italic text-primary">3-5 Business Days</p>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<button class="w-full bg-on-surface text-background font-button py-4 uppercase tracking-widest hover:opacity-90 transition-opacity">
+                        Print Invoice
+                    </button>
+<button class="w-full mt-4 bg-transparent hairline-border text-on-surface font-button py-4 uppercase tracking-widest hover:bg-on-surface hover:text-background transition-all">
+                        Return to Shop
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface border-t border-primary mt-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-12 w-full max-w-container-max mx-auto">
+<div class="md:col-span-1">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Sahariyar</h2>
+<p class="font-label-sm text-label-sm uppercase text-on-secondary-container">© 2024 Sahariyar Rahman Shop.</p>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-label-sm text-label-sm uppercase text-on-secondary-container hover:text-primary transition-all underline-offset-4" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm uppercase text-on-secondary-container hover:text-primary transition-all underline-offset-4" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-label-sm text-label-sm uppercase text-on-secondary-container hover:text-primary transition-all underline-offset-4" href="#">Shipping &amp; Returns</a>
+<a class="font-label-sm text-label-sm uppercase text-on-secondary-container hover:text-primary transition-all underline-offset-4" href="#">Contact Us</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="font-label-sm text-label-sm uppercase text-on-secondary-container hover:text-primary transition-all underline-offset-4" href="#">Instagram</a>
+<a class="font-label-sm text-label-sm uppercase text-on-secondary-container hover:text-primary transition-all underline-offset-4" href="#">Archive</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for print button
+        document.querySelector('button:contains("Print")')?.addEventListener('click', () => {
+            window.print();
+        });
+
+        // Add class to reveal elements on load
+        window.addEventListener('load', () => {
+            document.body.classList.add('opacity-100');
+        });
+    </script>
+</body></html>
